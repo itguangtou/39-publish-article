@@ -1,0 +1,49 @@
+/* 管理端 H5：限制弹层/消息框宽度，与页面 h5-shell 一致 */
+@media (min-width: 480px) {
+  .el-message-box,
+  .el-overlay-message-box .el-message-box {
+    max-width: 400px;
+  }
+}
+
+.el-message,
+.admin-toast {
+  z-index: 10000 !important;
+  min-width: auto;
+  max-width: calc(100vw - 32px);
+}
+
+.el-overlay.is-message-box {
+  z-index: 10001 !important;
+}
+
+/* 管理端表格 + 分页 H5 适配 */
+.article-table .el-table__cell {
+  padding: 14px 0;
+}
+
+.article-table .el-table__row {
+  height: 52px;
+}
+
+.article-table .cell {
+  line-height: 1.5;
+}
+
+.table-pagination .el-pagination {
+  width: 100%;
+}
+
+.table-pagination .el-pagination.is-background .btn-prev,
+.table-pagination .el-pagination.is-background .btn-next,
+.table-pagination .el-pagination.is-background .el-pager li {
+  min-width: 28px;
+}
+
+.table-pagination .el-pagination__sizes {
+  margin-right: 0;
+}
+
+.table-pagination .el-select {
+  width: 96px;
+}

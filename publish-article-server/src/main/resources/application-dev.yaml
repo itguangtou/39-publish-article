@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: publish-article-server
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/publish_article?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 100MB
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+storage:
+  # 运行时自动向上查找项目根目录 data/，此处仅作兜底
+  base-dir: data
+  public-prefix: /data/
+  max-width: 1080
+  webp-quality: 0.8
+
+jwt:
+  secret: dev-jwt-secret-key-at-least-256-bits-long-for-hmac-sha256-signing
+  expiration: 86400000

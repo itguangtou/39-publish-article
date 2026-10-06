@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+@layer components {
+  .h5-shell {
+    @apply mx-auto w-full min-w-0 max-w-[480px];
+  }
+}

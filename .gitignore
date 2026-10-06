@@ -1,2 +1,10 @@
 .idea/
 *.iml
+
+# Local uploads
+uploads/
+publish-article-server/uploads/
+
+# Runtime image storage
+data/**
+!data/.gitkeep
